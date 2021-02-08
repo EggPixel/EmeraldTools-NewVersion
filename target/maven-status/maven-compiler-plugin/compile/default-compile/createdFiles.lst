@@ -7,4 +7,4 @@ cn\eggpixel\DisableFlying\DFlyingEvent.class
 cn\eggpixel\EggPixel.class
 cn\eggpixel\AntiBuild\AntiBuildEvents.class
 cn\eggpixel\Heal\HealCommand.class
-cn\eggpixel\fly\FlyCommand.class
+cn\eggpixel\Fly\FlyCommand.class

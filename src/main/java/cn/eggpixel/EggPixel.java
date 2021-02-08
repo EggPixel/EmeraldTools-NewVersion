@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.logging.Level;
 
 public class EggPixel{
@@ -20,6 +21,7 @@ public class EggPixel{
             Main.plugin.getLogger().log(Level.SEVERE, "=================THIS IS A BUG OR FILE NOT EXIST!=============");
             Main.plugin.getLogger().log(Level.SEVERE, "错误!无法获取" + FileName + "下的" + Key + "键内容!请检查是否存在文件!");
             Main.plugin.getLogger().log(Level.SEVERE, "错误信息:" + e.getMessage());
+            Main.plugin.getLogger().log(Level.SEVERE, Arrays.toString(e.getStackTrace()));
             Main.plugin.getLogger().log(Level.SEVERE, "                         即将关闭插件!                          ");
             Main.plugin.getLogger().log(Level.SEVERE, "==============================================================");
             Bukkit.getPluginManager().disablePlugin(Main.plugin);
@@ -45,6 +47,7 @@ public class EggPixel{
             Main.plugin.getLogger().log(Level.SEVERE, "=================THIS IS A BUG OR FILE NOT EXIST!=============");
             Main.plugin.getLogger().log(Level.SEVERE, "                       错误!无法保存" + FileName);
             Main.plugin.getLogger().log(Level.SEVERE, "错误信息:" + e.getMessage());
+            Main.plugin.getLogger().log(Level.SEVERE, Arrays.toString(e.getStackTrace()));
             Main.plugin.getLogger().log(Level.SEVERE, "                         即将关闭插件!                          ");
             Main.plugin.getLogger().log(Level.SEVERE, "==============================================================");
             File antibuild = new File(Main.plugin.getDataFolder(),"antibuild.yml");
