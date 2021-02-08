@@ -24,15 +24,10 @@ public class EggPixel{
             Main.plugin.getLogger().log(Level.SEVERE, Arrays.toString(e.getStackTrace()));
             Main.plugin.getLogger().log(Level.SEVERE, "                         即将关闭插件!                          ");
             Main.plugin.getLogger().log(Level.SEVERE, "==============================================================");
+            if (Main.plugin.getDataFolder().delete()) {
+                Main.plugin.getLogger().log(Level.CONFIG, "已删除所有配置文件!");
+            }
             Bukkit.getPluginManager().disablePlugin(Main.plugin);
-            File antibuild = new File(Main.plugin.getDataFolder(),"antibuild.yml");
-            if (antibuild.exists()) {
-                antibuild.delete();
-            }
-            File config = new File(Main.plugin.getDataFolder(),"config.yml");
-            if (config.exists()) {
-                config.delete();
-            }
             return "§a读取文件错误!请查看后台!";
         }
     }
@@ -50,13 +45,8 @@ public class EggPixel{
             Main.plugin.getLogger().log(Level.SEVERE, Arrays.toString(e.getStackTrace()));
             Main.plugin.getLogger().log(Level.SEVERE, "                         即将关闭插件!                          ");
             Main.plugin.getLogger().log(Level.SEVERE, "==============================================================");
-            File antibuild = new File(Main.plugin.getDataFolder(),"antibuild.yml");
-            if (antibuild.exists()) {
-                antibuild.delete();
-            }
-            File config = new File(Main.plugin.getDataFolder(),"config.yml");
-            if (config.exists()) {
-                config.delete();
+            if (Main.plugin.getDataFolder().delete()) {
+                Main.plugin.getLogger().log(Level.CONFIG, "已删除所有配置文件!");
             }
             Bukkit.getPluginManager().disablePlugin(Main.plugin);
         }
