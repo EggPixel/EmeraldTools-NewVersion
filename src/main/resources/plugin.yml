@@ -1,0 +1,59 @@
+main: cn.eggpixel.Main
+name: EmeraldTools
+version: 2.0.0
+author: EmeraldsEgg
+api-version: 1.13
+
+commands:
+  df:
+    usage: 'Look at description'
+    description: Disable flying in a world.
+    permission: emeraldtools.true
+    permission-message: '§cYou do not have permission to do this!'
+  ab:
+    usage: 'Look at description'
+    description: Anti-Build in a world.
+    permission: emeraldtools.true
+    permission-message: '§cYou do not have permission to do this!'
+  heal:
+    usage: 'Look at description'
+    description: Heal a player.
+    permission: emeraldtools.true
+    permission-message: '§cYou do not have permission to do this!'
+  ad:
+    usage: 'Look at description'
+    description: Heal a player.
+    permission: emeraldtools.true
+    permission-message: '§cYou do not have permission to do this!'
+permissions:
+  emeraldtools.main:
+    default: op
+    children:
+      antibuild.admin: true
+      disableflying.admin: true
+      emeraldtools.heal: true
+      emeraldtools.antidrop: true
+  antibuild.admin:
+    default: op
+    children:
+      antibuild.place: true
+      antibuild.destroy: true
+      antibuild.attack: true
+  disableflying.admin:
+    default: op
+    children:
+      disableflying.fly: true
+  emeraldtools.true:
+    default: true
+  disableflying.fly:
+    default: op
+  antibuild.place:
+    default: op
+  antibuild.destroy:
+    default: op
+  antibuild.attack:
+    default: op
+  emeraldtools.heal:
+    default: op
+  emeraldtools.antidrop:
+    default: true

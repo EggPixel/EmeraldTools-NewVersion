@@ -1,0 +1,24 @@
+#首设置:
+#true为玩家因本插件飞行坠落时不受伤
+FLY_NO_FALL_DAMAGE: true
+
+#信息模块:
+DO_IN_CONSOLE: "§a[EmeraldTools] §c§l此命令无法在控制台使用!"
+WORLD_NOT_FOUND: "§a[EmeraldTools] §c世界没有找到!"
+PLAYER_NOT_FOUND: "§a[EmeraldTools] §c玩家没有找到!"
+NO_PERMISSION: "§a[EmeraldTools] §c你没有权限这么做!"
+FLYING_ADD_OR_REMOVE_WORLD: "§a[DisableFlying] 成功设置%WORLD%不可飞行状态为%STATUS%."
+FLYING_IS_NOT_ENABLED: "§a[DisableFlying] §c此世界已禁止飞行!你即将坠落!"
+
+ANTIBUILD_ADD_OR_REMOVE_WORLD: "§a[AntiBuild] 成功设置%WORLD%不可搭建状态为%STATUS%."
+AB_USAGE: "§a[AntiBuild] §c用法: /df [世界名] [布尔值]([]为可选)"
+AB_BUILD: "§a[AntiBuild] §c嘿!你不能在这里做这件事!"
+
+HEAL_PLAYER: "§a[EmeraldTools] §a成功治疗 %PLAYERNAME%"
+HEAL_USAGE: "§a[EmeraldTools] §c用法: /heal [玩家名]([]为可选)"
+
+ANTI_DROP_CANCELLED: "§a[AntiDrop] 你现在不能扔东西!使用/ad解除!"
+ANTI_DROP_SET: "§a[AntiDrop] 你现在%STATUS%扔东西了!"
+#禁止飞行的世界:
+#格式: 世界名: true/false
+#游戏内使用/df可自动修改
