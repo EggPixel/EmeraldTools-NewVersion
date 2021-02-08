@@ -1,0 +1,10 @@
+cn\eggpixel\AntiDrop\AntiDropCommand.class
+cn\eggpixel\DisableFlying\DFlyingCommand.class
+cn\eggpixel\Main.class
+cn\eggpixel\AntiDrop\AntiDropEvent.class
+cn\eggpixel\AntiBuild\AntiBuildCommand.class
+cn\eggpixel\DisableFlying\DFlyingEvent.class
+cn\eggpixel\EggPixel.class
+cn\eggpixel\AntiBuild\AntiBuildEvents.class
+cn\eggpixel\Heal\HealCommand.class
+cn\eggpixel\fly\FlyCommand.class

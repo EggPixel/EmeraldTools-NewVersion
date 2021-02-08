@@ -6,6 +6,7 @@ import cn.eggpixel.antiDrop.AntiDropCommand;
 import cn.eggpixel.antiDrop.AntiDropEvent;
 import cn.eggpixel.disableFlying.DFlyingCommand;
 import cn.eggpixel.disableFlying.DFlyingEvent;
+import cn.eggpixel.fly.FlyCommand;
 import cn.eggpixel.heal.HealCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -35,6 +36,7 @@ public class Main extends JavaPlugin {
         Objects.requireNonNull(this.getCommand("ab")).setExecutor(new AntiBuildCommand(this));
         Objects.requireNonNull(this.getCommand("heal")).setExecutor(new HealCommand(this));
         Objects.requireNonNull(this.getCommand("ad")).setExecutor(new AntiDropCommand(this));
+        Objects.requireNonNull(this.getCommand("fly")).setExecutor(new FlyCommand(this));
 
         Bukkit.getPluginManager().registerEvents(new DFlyingEvent(),this);
         Bukkit.getPluginManager().registerEvents(new AntiDropEvent(),this);
