@@ -19,6 +19,9 @@ HEAL_USAGE: "§a[EmeraldTools] §c用法: /heal [玩家名]([]为可选)"
 
 ANTI_DROP_CANCELLED: "§a[AntiDrop] 你现在不能扔东西!使用/ad解除!"
 ANTI_DROP_SET: "§a[AntiDrop] 你现在%STATUS%扔东西了!"
+
+FLYING_USED: "§a[Flying] 设置%PLAYERNAME%的飞行状态为%STATUS%"
+FLYING_USAGE: "§a[Flying] §c用法: /fly [玩家名]([]为可选)"
 #禁止飞行的世界:
 #格式: 世界名: true/false
 #游戏内使用/df可自动修改
