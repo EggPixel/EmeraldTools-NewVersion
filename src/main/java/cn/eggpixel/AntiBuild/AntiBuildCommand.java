@@ -1,4 +1,4 @@
-package cn.eggpixel.antiBuild;
+package cn.eggpixel.AntiBuild;
 
 import cn.eggpixel.EggPixel;
 import cn.eggpixel.Main;
@@ -28,10 +28,10 @@ public class AntiBuildCommand implements CommandExecutor  {
                 if (args.length == 1) {
                     String now = Bukkit.getWorld(args[0]).getName();
                     if (Boolean.parseBoolean(new EggPixel("antibuild.yml").getString(now))) {
-                        new EggPixel("antibuild.yml").set(now, String.valueOf(false));
+                        new EggPixel("antibuild.yml").set(now, false);
                         sender.sendMessage(plugin.getConfig().getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "False"));
                     } else {
-                        new EggPixel("antibuild.yml").set(now, String.valueOf(true));
+                        new EggPixel("antibuild.yml").set(now, true);
                         sender.sendMessage(plugin.getConfig().getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "True"));
                     }
                     return true;
@@ -40,10 +40,10 @@ public class AntiBuildCommand implements CommandExecutor  {
                     String now = Bukkit.getWorld(args[0]).getName();
                     boolean bool = Boolean.parseBoolean(args[1]);
                     if (!bool) {
-                        new EggPixel("antibuild.yml").set(now, String.valueOf(false));
+                        new EggPixel("antibuild.yml").set(now, false);
                         sender.sendMessage(plugin.getConfig().getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "False"));
                     } else {
-                        new EggPixel("antibuild.yml").set(now, String.valueOf(true));
+                        new EggPixel("antibuild.yml").set(now, true);
                         sender.sendMessage(plugin.getConfig().getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "True"));
                     }
                     return true;
@@ -52,10 +52,10 @@ public class AntiBuildCommand implements CommandExecutor  {
                     if (sender instanceof Player) {
                         String now = ((Player) sender).getWorld().getName();
                         if (Boolean.parseBoolean(new EggPixel("antibuild.yml").getString(now))) {
-                            new EggPixel("antibuild.yml").set(now, String.valueOf(false));
+                            new EggPixel("antibuild.yml").set(now, false);
                             sender.sendMessage(plugin.getConfig().getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "False"));
                         } else {
-                            new EggPixel("antibuild.yml").set(now, String.valueOf(true));
+                            new EggPixel("antibuild.yml").set(now, true);
                             sender.sendMessage(plugin.getConfig().getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "True"));
                         }
                     } else {

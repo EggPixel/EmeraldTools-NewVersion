@@ -1,4 +1,4 @@
-package cn.eggpixel.disableFlying;
+package cn.eggpixel.DisableFlying;
 
 
 import cn.eggpixel.Main;

@@ -1,4 +1,4 @@
-package cn.eggpixel.antiBuild;
+package cn.eggpixel.AntiBuild;
 
 import cn.eggpixel.Main;
 import org.bukkit.configuration.file.YamlConfiguration;

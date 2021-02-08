@@ -1,4 +1,4 @@
-package cn.eggpixel.fly;
+package cn.eggpixel.Fly;
 
 import cn.eggpixel.Main;
 import org.bukkit.Bukkit;

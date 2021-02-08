@@ -1,4 +1,4 @@
-package cn.eggpixel.antiDrop;
+package cn.eggpixel.AntiDrop;
 
 import cn.eggpixel.Main;
 import org.bukkit.Bukkit;
@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
-import static cn.eggpixel.antiDrop.AntiDropEvent.AntiDrop;
+import static cn.eggpixel.AntiDrop.AntiDropEvent.AntiDrop;
 
 public class AntiDropCommand implements CommandExecutor {
     public final Main plugin;

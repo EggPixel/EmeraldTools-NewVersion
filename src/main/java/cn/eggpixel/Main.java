@@ -1,17 +1,19 @@
 package cn.eggpixel;
 
-import cn.eggpixel.antiBuild.AntiBuildCommand;
-import cn.eggpixel.antiBuild.AntiBuildEvents;
-import cn.eggpixel.antiDrop.AntiDropCommand;
-import cn.eggpixel.antiDrop.AntiDropEvent;
-import cn.eggpixel.disableFlying.DFlyingCommand;
-import cn.eggpixel.disableFlying.DFlyingEvent;
-import cn.eggpixel.fly.FlyCommand;
-import cn.eggpixel.heal.HealCommand;
+import cn.eggpixel.AntiBuild.AntiBuildCommand;
+import cn.eggpixel.AntiBuild.AntiBuildEvents;
+import cn.eggpixel.AntiDrop.AntiDropCommand;
+import cn.eggpixel.AntiDrop.AntiDropEvent;
+import cn.eggpixel.DisableFlying.DFlyingCommand;
+import cn.eggpixel.DisableFlying.DFlyingEvent;
+import cn.eggpixel.Fly.FlyCommand;
+import cn.eggpixel.Heal.HealCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
+import java.io.IOException;
+import java.net.URLClassLoader;
 import java.util.Objects;
 import java.util.logging.Level;
 
@@ -54,5 +56,6 @@ public class Main extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage("§a[DisableFlying] ***********************");
         Bukkit.getConsoleSender().sendMessage("§a[DisableFlying] *     插件已关闭!     *");
         Bukkit.getConsoleSender().sendMessage("§a[DisableFlying] ***********************");
+        Bukkit.getPluginManager().disablePlugin(this);
     }
 }

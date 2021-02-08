@@ -1,4 +1,4 @@
-package cn.eggpixel.heal;
+package cn.eggpixel.Heal;
 
 import cn.eggpixel.Main;
 import org.bukkit.Bukkit;
