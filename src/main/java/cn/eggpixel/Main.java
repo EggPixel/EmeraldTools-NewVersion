@@ -9,11 +9,11 @@ import cn.eggpixel.DisableFlying.DFlyingEvent;
 import cn.eggpixel.Fly.FlyCommand;
 import cn.eggpixel.Heal.HealCommand;
 import org.bukkit.Bukkit;
+import org.bukkit.event.HandlerList;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
-import java.io.IOException;
-import java.net.URLClassLoader;
 import java.util.Objects;
 import java.util.logging.Level;
 
@@ -56,6 +56,6 @@ public class Main extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage("§a[DisableFlying] ***********************");
         Bukkit.getConsoleSender().sendMessage("§a[DisableFlying] *     插件已关闭!     *");
         Bukkit.getConsoleSender().sendMessage("§a[DisableFlying] ***********************");
-        Bukkit.getPluginManager().disablePlugin(this);
+        HandlerList.unregisterAll((Listener) this);
     }
 }

@@ -1,6 +1,8 @@
 cn\eggpixel\AntiDrop\AntiDropCommand.class
+cn\eggpixel\Exception\FATAL.class
 cn\eggpixel\DisableFlying\DFlyingCommand.class
 cn\eggpixel\Main.class
+cn\eggpixel\Exception\ERROR.class
 cn\eggpixel\AntiDrop\AntiDropEvent.class
 cn\eggpixel\AntiBuild\AntiBuildCommand.class
 cn\eggpixel\DisableFlying\DFlyingEvent.class

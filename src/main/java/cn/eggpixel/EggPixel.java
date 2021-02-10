@@ -1,10 +1,9 @@
 package cn.eggpixel;
 
-import org.bukkit.Bukkit;
+import cn.eggpixel.Exception.FATAL;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
-import java.util.Arrays;
 import java.util.logging.Level;
 
 public class EggPixel{
@@ -18,16 +17,10 @@ public class EggPixel{
             YamlConfiguration getting = load();
             return getting.getString(Key);
         } catch (Exception e) {
-            Main.plugin.getLogger().log(Level.SEVERE, "=================THIS IS A BUG OR FILE NOT EXIST!=============");
-            Main.plugin.getLogger().log(Level.SEVERE, "错误!无法获取" + FileName + "下的" + Key + "键内容!请检查是否存在文件!");
-            Main.plugin.getLogger().log(Level.SEVERE, "错误信息:" + e.getMessage());
-            Main.plugin.getLogger().log(Level.SEVERE, Arrays.toString(e.getStackTrace()));
-            Main.plugin.getLogger().log(Level.SEVERE, "                         即将关闭插件!                          ");
-            Main.plugin.getLogger().log(Level.SEVERE, "==============================================================");
-            if (Main.plugin.getDataFolder().delete()) {
+            new FATAL(e);
+            if (new File(Main.plugin.getDataFolder(),"antibuild.yml").delete() || new File(Main.plugin.getDataFolder(),"config.yml").delete()) {
                 Main.plugin.getLogger().log(Level.CONFIG, "已删除所有配置文件!");
             }
-            Bukkit.getPluginManager().disablePlugin(Main.plugin);
             return "§a读取文件错误!请查看后台!";
         }
     }
@@ -39,24 +32,18 @@ public class EggPixel{
         try {
             load().save(new File(Main.plugin.getDataFolder(), FileName));
         } catch (Exception e) {
-            Main.plugin.getLogger().log(Level.SEVERE, "=================THIS IS A BUG OR FILE NOT EXIST!=============");
-            Main.plugin.getLogger().log(Level.SEVERE, "                       错误!无法保存" + FileName);
-            Main.plugin.getLogger().log(Level.SEVERE, "错误信息:" + e.getMessage());
-            Main.plugin.getLogger().log(Level.SEVERE, Arrays.toString(e.getStackTrace()));
-            Main.plugin.getLogger().log(Level.SEVERE, "                         即将关闭插件!                          ");
-            Main.plugin.getLogger().log(Level.SEVERE, "==============================================================");
+            new FATAL(e);
             if (Main.plugin.getDataFolder().delete()) {
                 Main.plugin.getLogger().log(Level.CONFIG, "已删除所有配置文件!");
             }
-            Bukkit.getPluginManager().disablePlugin(Main.plugin);
         }
     }
-    public void set(String old,String news) {
-        load().set(old, news);
+    public void set(String Key,String news) {
+        load().set(Key, news);
         save();
     }
-    public void set(String old,boolean news) {
-        load().set(old, news);
+    public void set(String Key,boolean news) {
+        load().set(Key, news);
         save();
     }
     public YamlConfiguration load() {

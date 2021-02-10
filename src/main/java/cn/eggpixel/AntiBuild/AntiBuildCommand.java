@@ -26,25 +26,25 @@ public class AntiBuildCommand implements CommandExecutor  {
                     return true;
                 }
                 if (args.length == 1) {
-                    String now = Bukkit.getWorld(args[0]).getName();
+                    String now = Objects.requireNonNull(Bukkit.getWorld(args[0])).getName();
                     if (Boolean.parseBoolean(new EggPixel("antibuild.yml").getString(now))) {
                         new EggPixel("antibuild.yml").set(now, false);
-                        sender.sendMessage(plugin.getConfig().getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "False"));
+                        sender.sendMessage(new EggPixel("config.yml").getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "False"));
                     } else {
                         new EggPixel("antibuild.yml").set(now, true);
-                        sender.sendMessage(plugin.getConfig().getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "True"));
+                        sender.sendMessage(new EggPixel("config.yml").getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "True"));
                     }
                     return true;
                 }
                 if (args.length == 2) {
-                    String now = Bukkit.getWorld(args[0]).getName();
+                    String now = Objects.requireNonNull(Bukkit.getWorld(args[0])).getName();
                     boolean bool = Boolean.parseBoolean(args[1]);
                     if (!bool) {
                         new EggPixel("antibuild.yml").set(now, false);
-                        sender.sendMessage(plugin.getConfig().getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "False"));
+                        sender.sendMessage(new EggPixel("config.yml").getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "False"));
                     } else {
                         new EggPixel("antibuild.yml").set(now, true);
-                        sender.sendMessage(plugin.getConfig().getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "True"));
+                        sender.sendMessage(new EggPixel("config.yml").getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "True"));
                     }
                     return true;
                 }
@@ -53,23 +53,23 @@ public class AntiBuildCommand implements CommandExecutor  {
                         String now = ((Player) sender).getWorld().getName();
                         if (Boolean.parseBoolean(new EggPixel("antibuild.yml").getString(now))) {
                             new EggPixel("antibuild.yml").set(now, false);
-                            sender.sendMessage(plugin.getConfig().getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "False"));
+                            sender.sendMessage(new EggPixel("config.yml").getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "False"));
                         } else {
                             new EggPixel("antibuild.yml").set(now, true);
-                            sender.sendMessage(plugin.getConfig().getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "True"));
+                            sender.sendMessage(new EggPixel("config.yml").getString("ANTIBUILD_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "True"));
                         }
                     } else {
-                        sender.sendMessage(plugin.getConfig().getString("DO_IN_CONSOLE"));
+                        sender.sendMessage(new EggPixel("config.yml").getString("DO_IN_CONSOLE"));
                     }
                 } else {
-                    sender.sendMessage(plugin.getConfig().getString("AB_USAGE"));
+                    sender.sendMessage(new EggPixel("config.yml").getString("AB_USAGE"));
                 }
             } else {
-                sender.sendMessage(plugin.getConfig().getString("NO_PERMISSION"));
+                sender.sendMessage(new EggPixel("config.yml").getString("NO_PERMISSION"));
             }
             return true;
         } catch (Exception e) {
-            sender.sendMessage(plugin.getConfig().getString("WORLD_NOT_FOUND"));
+            sender.sendMessage(new EggPixel("config.yml").getString("WORLD_NOT_FOUND"));
             return true;
         }
     }

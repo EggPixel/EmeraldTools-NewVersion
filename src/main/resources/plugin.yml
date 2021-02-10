@@ -22,7 +22,7 @@ commands:
     permission-message: '§cYou do not have permission to do this!'
   ad:
     usage: 'Look at description'
-    description: Heal a player.
+    description: Anti-Drop.
     permission: emeraldtools.true
     permission-message: '§cYou do not have permission to do this!'
   fly:
@@ -39,6 +39,7 @@ permissions:
       emeraldtools.heal: true
       emeraldtools.antidrop: true
       emeraldtools.fly: true
+      emeraldtools.lagremover: true
   antibuild.admin:
     default: op
     children:

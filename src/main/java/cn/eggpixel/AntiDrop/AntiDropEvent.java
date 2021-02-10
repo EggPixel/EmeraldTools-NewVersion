@@ -1,5 +1,6 @@
 package cn.eggpixel.AntiDrop;
 
+import cn.eggpixel.EggPixel;
 import cn.eggpixel.Main;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -14,7 +15,7 @@ public class AntiDropEvent implements Listener {
     public void onPlayerDrop(PlayerDropItemEvent e) {
         if (AntiDrop.contains(e.getPlayer().getUniqueId().toString())) {
             e.setCancelled(true);
-            e.getPlayer().sendMessage(Main.plugin.getConfig().getString("ANTI_DROP_CANCELLED"));
+            e.getPlayer().sendMessage(new EggPixel("config.yml").getString("ANTI_DROP_CANCELLED"));
         } else {
             e.setCancelled(false);
         }

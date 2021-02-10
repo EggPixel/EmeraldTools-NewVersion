@@ -13,20 +13,11 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
     <dependencies>
-        <!-- 快速开发框架 -->
-        <dependency>
-            <groupId>org.mountcloud</groupId>
-            <artifactId>mc-plugin-common</artifactId>
-            <version>1.13-R0.1-SNAPSHOT-v1.0</version>
-            <scope>provided</scope>
-        </dependency>
-
-
         <!--Spigot API -->
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.13-R0.1-SNAPSHOT</version>
+            <version>1.16.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
@@ -34,7 +25,8 @@
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.13-R0.1-SNAPSHOT</version>
+            <version>1.15.2-R0.1-SNAPSHOT</version>
+            <type>jar</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -48,4 +40,10 @@
             <version>1.2</version>
         </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
 </project>

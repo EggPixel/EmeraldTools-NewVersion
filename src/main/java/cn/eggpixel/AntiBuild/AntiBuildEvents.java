@@ -1,5 +1,6 @@
 package cn.eggpixel.AntiBuild;
 
+import cn.eggpixel.EggPixel;
 import cn.eggpixel.Main;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Entity;
@@ -19,7 +20,7 @@ public class AntiBuildEvents implements Listener {
         Player player = p.getPlayer();
         if (Boolean.parseBoolean(config.getString(player.getWorld().getName())) && !player.hasPermission("antibuild.place")) {
             p.setCancelled(true);
-            player.sendMessage(Main.plugin.getConfig().getString("AB_BUILD"));
+            player.sendMessage(new EggPixel("config.yml").getString("AB_BUILD"));
         }
     }
     @EventHandler
@@ -28,7 +29,7 @@ public class AntiBuildEvents implements Listener {
         Player player = b.getPlayer();
         if (Boolean.parseBoolean(config.getString(player.getWorld().getName())) && !player.hasPermission("antibuild.destroy")) {
             b.setCancelled(true);
-            player.sendMessage(Main.plugin.getConfig().getString("AB_BUILD"));
+            player.sendMessage(new EggPixel("config.yml").getString("AB_BUILD"));
         }
     }
     @EventHandler
@@ -37,7 +38,7 @@ public class AntiBuildEvents implements Listener {
         Entity player = a.getDamager();
         if (Boolean.parseBoolean(config.getString(player.getWorld().getName())) && !player.hasPermission("antibuild.attack")) {
             a.setCancelled(true);
-            player.sendMessage(Main.plugin.getConfig().getString("AB_BUILD"));
+            player.sendMessage(new EggPixel("config.yml").getString("AB_BUILD"));
         }
     }
 }
