@@ -2,7 +2,7 @@ main: cn.eggpixel.Main
 name: EmeraldTools
 version: 2.0.0
 author: EmeraldsEgg
-api-version: 1.13
+api-version: 1.16.1
 
 commands:
   df:
@@ -22,7 +22,7 @@ commands:
     permission-message: '§cYou do not have permission to do this!'
   ad:
     usage: 'Look at description'
-    description: Heal a player.
+    description: Anti-Drop.
     permission: emeraldtools.true
     permission-message: '§cYou do not have permission to do this!'
   fly:
@@ -39,6 +39,7 @@ permissions:
       emeraldtools.heal: true
       emeraldtools.antidrop: true
       emeraldtools.fly: true
+      emeraldtools.lagremover: true
   antibuild.admin:
     default: op
     children:

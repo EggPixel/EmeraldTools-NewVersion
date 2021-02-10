@@ -2,7 +2,7 @@ main: cn.eggpixel.Main
 name: EmeraldTools
 version: 2.0.0
 author: EmeraldsEgg
-api-version: 1.13
+api-version: 1.16.1
 
 commands:
   df:

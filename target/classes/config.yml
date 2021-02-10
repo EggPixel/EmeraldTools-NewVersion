@@ -1,6 +1,7 @@
 #首设置:
 #true为玩家因本插件飞行坠落时不受伤
 FLY_NO_FALL_DAMAGE: true
+LAG_REMOVER_ENABLED: true
 
 #信息模块:
 DO_IN_CONSOLE: "§a[EmeraldTools] §c§l此命令无法在控制台使用!"
