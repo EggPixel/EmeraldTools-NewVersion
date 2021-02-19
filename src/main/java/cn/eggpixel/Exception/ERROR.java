@@ -1,19 +1,18 @@
-/*
- * 仅发出信息
- * 不关闭插件
- */
+
 package cn.eggpixel.Exception;
 
-import cn.eggpixel.Main;
+import cn.eggpixel.Message;
 
-import java.util.logging.Level;
 
 public class ERROR {
+    /**
+     * 制造错误信息
+     * */
     public ERROR(Exception ExceptionInfo) {
-        Main.plugin.getLogger().log(Level.SEVERE, "=================THIS IS A BUG OR FILE NOT EXIST!=============");
-        Main.plugin.getLogger().log(Level.SEVERE, "错误信息:" + ExceptionInfo.getMessage());
-        Main.plugin.getLogger().log(Level.SEVERE, ExceptionInfo.toString());
-        Main.plugin.getLogger().log(Level.SEVERE, "反馈:https://www.eggpixel.cn/FeedBack.html");
-        Main.plugin.getLogger().log(Level.SEVERE, "==============================================================");
+        new Message("=================THIS IS A BUG OR FILE NOT EXIST!=============").error();
+        new Message("错误信息:" + ExceptionInfo.getMessage()).error();
+        new Message(ExceptionInfo.toString()).error();
+        new Message("反馈:https://www.eggpixel.cn/FeedBack.html").error();
+        new Message("==============================================================").error();
     }
 }

@@ -9,8 +9,6 @@ import cn.eggpixel.DisableFlying.DFlyingEvent;
 import cn.eggpixel.Fly.FlyCommand;
 import cn.eggpixel.Heal.HealCommand;
 import org.bukkit.Bukkit;
-import org.bukkit.event.HandlerList;
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -31,9 +29,9 @@ public class Main extends JavaPlugin {
             saveResource("antibuild.yml",false);
             getLogger().log(Level.SEVERE,"没有找到antibuild.yml文件!正在生成!");
         }
-        Bukkit.getConsoleSender().sendMessage("§a[DisableFlying] ***********************");
-        Bukkit.getConsoleSender().sendMessage("§a[DisableFlying] *     插件已启动!     *");
-        Bukkit.getConsoleSender().sendMessage("§a[DisableFlying] ***********************");
+        Bukkit.getConsoleSender().sendMessage("§a[EmeraldTools] ***********************");
+        Bukkit.getConsoleSender().sendMessage("§a[EmeraldTools] *     插件已启动!     *");
+        Bukkit.getConsoleSender().sendMessage("§a[EmeraldTools] ***********************");
         Objects.requireNonNull(this.getCommand("df")).setExecutor(new DFlyingCommand(this));
         Objects.requireNonNull(this.getCommand("ab")).setExecutor(new AntiBuildCommand(this));
         Objects.requireNonNull(this.getCommand("heal")).setExecutor(new HealCommand(this));
@@ -53,9 +51,8 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        Bukkit.getConsoleSender().sendMessage("§a[DisableFlying] ***********************");
-        Bukkit.getConsoleSender().sendMessage("§a[DisableFlying] *     插件已关闭!     *");
-        Bukkit.getConsoleSender().sendMessage("§a[DisableFlying] ***********************");
-        HandlerList.unregisterAll((Listener) this);
+        Bukkit.getConsoleSender().sendMessage("§a[EmeraldTools] ***********************");
+        Bukkit.getConsoleSender().sendMessage("§a[EmeraldTools] *     插件已关闭!     *");
+        Bukkit.getConsoleSender().sendMessage("§a[EmeraldTools] ***********************");
     }
 }

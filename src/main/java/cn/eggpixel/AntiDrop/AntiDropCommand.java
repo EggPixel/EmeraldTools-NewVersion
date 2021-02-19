@@ -7,6 +7,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
 import static cn.eggpixel.AntiDrop.AntiDropEvent.AntiDrop;
 
@@ -17,7 +18,7 @@ public class AntiDropCommand implements CommandExecutor {
     }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
+    public boolean onCommand(CommandSender sender, @NotNull Command cmd, @NotNull String s, String[] args) {
         if (sender.hasPermission("emeraldtools.antidrop")) {
             if (sender instanceof Player) {
                 Player player = Bukkit.getPlayerExact(sender.getName());

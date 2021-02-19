@@ -8,6 +8,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
@@ -18,7 +19,7 @@ public class HealCommand implements CommandExecutor {
     }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
+    public boolean onCommand(CommandSender sender, @NotNull Command cmd, @NotNull String s, String[] args) {
         if (sender.hasPermission("emeraldtools.heal")) {
             if (args.length == 0) {
                 if (sender instanceof Player) {

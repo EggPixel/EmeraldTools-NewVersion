@@ -4,9 +4,11 @@ import cn.eggpixel.Exception.FATAL;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
-import java.util.logging.Level;
 
 public class EggPixel{
+    /**
+     * 获取yml文件中的内容
+     * */
     final String FileName;
     YamlConfiguration get = null;
     public EggPixel(String FileName) {
@@ -19,7 +21,7 @@ public class EggPixel{
         } catch (Exception e) {
             new FATAL(e);
             if (new File(Main.plugin.getDataFolder(),"antibuild.yml").delete() || new File(Main.plugin.getDataFolder(),"config.yml").delete()) {
-                Main.plugin.getLogger().log(Level.CONFIG, "已删除所有配置文件!");
+                new Message("已删除所有配置文件!").debug();
             }
             return "§a读取文件错误!请查看后台!";
         }
@@ -34,7 +36,7 @@ public class EggPixel{
         } catch (Exception e) {
             new FATAL(e);
             if (Main.plugin.getDataFolder().delete()) {
-                Main.plugin.getLogger().log(Level.CONFIG, "已删除所有配置文件!");
+                new Message("已删除所有配置文件!").debug();
             }
         }
     }

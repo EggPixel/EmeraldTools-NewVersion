@@ -7,6 +7,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
@@ -16,7 +17,7 @@ public class DFlyingCommand implements CommandExecutor {
         this.plugin = plugin;
     }
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, String[] args) {
         try {
             if (sender.hasPermission("disableflying.fly")) {
                 if (Objects.equals(args[0], "reload") && args.length == 1) {

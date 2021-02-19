@@ -1,7 +1,6 @@
 package cn.eggpixel.AntiDrop;
 
 import cn.eggpixel.EggPixel;
-import cn.eggpixel.Main;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerDropItemEvent;
