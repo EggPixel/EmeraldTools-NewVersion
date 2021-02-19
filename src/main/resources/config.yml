@@ -1,7 +1,6 @@
 #首设置:
 #true为玩家因本插件飞行坠落时不受伤
 FLY_NO_FALL_DAMAGE: true
-LAG_REMOVER_ENABLED: true
 #信息模块:
 DO_IN_CONSOLE: "§a[EmeraldTools] §c§l此命令无法在控制台使用!"
 WORLD_NOT_FOUND: "§a[EmeraldTools] §c世界没有找到!"
@@ -22,10 +21,6 @@ ANTI_DROP_SET: "§a[AntiDrop] 你现在%STATUS%扔东西了!"
 
 FLYING_USED: "§a[Flying] 设置%PLAYERNAME%的飞行状态为%STATUS%"
 FLYING_USAGE: "§a[Flying] §c用法: /fly [玩家名]([]为可选)"
-
-VANISH_WAS_USE: "§a[Vanish] 你现在%STATUS%隐身了"
-VANISH_USE: "§a[Vanish] %PLAYERNAME%现在%STATUS%隐身了"
-VANISH_USAGE: "§a[Vanish] 用法:/v [玩家名]([]为可选)"
 #禁止飞行的世界:
 #格式: 世界名: true/false
 #游戏内使用/df可自动修改

@@ -30,12 +30,6 @@ commands:
     description: Flight
     permission: emeraldtools.true
     permission-message: '§cYou do not have permission to do this!'
-  vanish:
-    usage: 'Look at description'
-    description: Vanish
-    permission: emeraldtools.true
-    permission-message: '§cYou do not have permission to do this!'
-    aliases: [v]
 permissions:
   emeraldtools.main:
     default: op
@@ -46,7 +40,6 @@ permissions:
       emeraldtools.antidrop: true
       emeraldtools.fly: true
       emeraldtools.lagremover: true
-      emeraldtools.vanish: true
   antibuild.admin:
     default: op
     children:
@@ -72,10 +65,4 @@ permissions:
   emeraldtools.antidrop:
     default: true
   emeraldtools.fly:
-    default: op
-  emeraldtools.vanish:
-    default: op
-    children:
-      emeraldtools.vanish.see: true
-  emeraldtools.vanish.see:
     default: op

@@ -37,7 +37,6 @@ public class Main extends JavaPlugin {
         Objects.requireNonNull(this.getCommand("heal")).setExecutor(new HealCommand(this));
         Objects.requireNonNull(this.getCommand("ad")).setExecutor(new AntiDropCommand(this));
         Objects.requireNonNull(this.getCommand("fly")).setExecutor(new FlyCommand(this));
-
         Bukkit.getPluginManager().registerEvents(new DFlyingEvent(),this);
         Bukkit.getPluginManager().registerEvents(new AntiDropEvent(),this);
         Bukkit.getPluginManager().registerEvents(new AntiBuildEvents(), this);
