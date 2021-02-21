@@ -8,6 +8,8 @@ import cn.eggpixel.DisableFlying.DFlyingCommand;
 import cn.eggpixel.DisableFlying.DFlyingEvent;
 import cn.eggpixel.Fly.FlyCommand;
 import cn.eggpixel.Heal.HealCommand;
+import cn.eggpixel.Prefix.ChatEvent;
+import cn.eggpixel.Prefix.PrefixCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -29,6 +31,7 @@ public class Main extends JavaPlugin {
             saveResource("antibuild.yml",false);
             getLogger().log(Level.SEVERE,"没有找到antibuild.yml文件!正在生成!");
         }
+        new EggPixel("prefix.yml").save();
         Bukkit.getConsoleSender().sendMessage("§a[EmeraldTools] ***********************");
         Bukkit.getConsoleSender().sendMessage("§a[EmeraldTools] *     插件已启动!     *");
         Bukkit.getConsoleSender().sendMessage("§a[EmeraldTools] ***********************");
@@ -37,9 +40,12 @@ public class Main extends JavaPlugin {
         Objects.requireNonNull(this.getCommand("heal")).setExecutor(new HealCommand(this));
         Objects.requireNonNull(this.getCommand("ad")).setExecutor(new AntiDropCommand(this));
         Objects.requireNonNull(this.getCommand("fly")).setExecutor(new FlyCommand(this));
+        Objects.requireNonNull(this.getCommand("prefix")).setExecutor(new PrefixCommand(this));
+
         Bukkit.getPluginManager().registerEvents(new DFlyingEvent(),this);
         Bukkit.getPluginManager().registerEvents(new AntiDropEvent(),this);
         Bukkit.getPluginManager().registerEvents(new AntiBuildEvents(), this);
+        Bukkit.getPluginManager().registerEvents(new ChatEvent(), this);
     }
     public static Main plugin;
 

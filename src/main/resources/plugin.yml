@@ -6,28 +6,33 @@ api-version: 1.15
 
 commands:
   df:
-    usage: 'Look at description'
+    usage: /<command> [World] [true/false]
     description: Disable flying in a world.
     permission: emeraldtools.true
     permission-message: '§cYou do not have permission to do this!'
   ab:
-    usage: 'Look at description'
+    usage: /<command> [World] [true/false]
     description: Anti-Build in a world.
     permission: emeraldtools.true
     permission-message: '§cYou do not have permission to do this!'
   heal:
-    usage: 'Look at description'
+    usage: /<command> [Player]
     description: Heal a player.
     permission: emeraldtools.true
     permission-message: '§cYou do not have permission to do this!'
   ad:
-    usage: 'Look at description'
+    usage: /<command>
     description: Anti-Drop.
     permission: emeraldtools.true
     permission-message: '§cYou do not have permission to do this!'
   fly:
-    usage: 'Look at description'
+    usage: /<command> [Player]
     description: Flight
+    permission: emeraldtools.true
+    permission-message: '§cYou do not have permission to do this!'
+  prefix:
+    usage: /<command> <Player> <add/remove> [prefix]
+    description: Give a player a prefix
     permission: emeraldtools.true
     permission-message: '§cYou do not have permission to do this!'
 permissions:
@@ -40,6 +45,8 @@ permissions:
       emeraldtools.antidrop: true
       emeraldtools.fly: true
       emeraldtools.lagremover: true
+      emeraldtools.ban: true
+      emeraldtools.addprefix: true
   antibuild.admin:
     default: op
     children:
@@ -65,4 +72,6 @@ permissions:
   emeraldtools.antidrop:
     default: true
   emeraldtools.fly:
+    default: op
+  emeraldtools.addprefix:
     default: op

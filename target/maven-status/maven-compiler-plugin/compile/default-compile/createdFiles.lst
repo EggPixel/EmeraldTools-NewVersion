@@ -3,7 +3,9 @@ cn\eggpixel\Exception\FATAL.class
 cn\eggpixel\Message.class
 cn\eggpixel\DisableFlying\DFlyingCommand.class
 cn\eggpixel\Main.class
+cn\eggpixel\Prefix\PrefixCommand.class
 cn\eggpixel\Exception\ERROR.class
+cn\eggpixel\Prefix\ChatEvent.class
 cn\eggpixel\AntiDrop\AntiDropEvent.class
 cn\eggpixel\AntiBuild\AntiBuildCommand.class
 cn\eggpixel\DisableFlying\DFlyingEvent.class
