@@ -22,44 +22,44 @@ public class DFlyingCommand implements CommandExecutor {
             if (sender.hasPermission("disableflying.fly")) {
                 if (args.length == 0) {
                     String now = ((Player) sender).getWorld().getName();
-                    if (Boolean.parseBoolean(new EggPixel("config.yml").getString(now))) {
-                        new EggPixel("config.yml").set(now, false);
+                    if (Boolean.parseBoolean(new EggPixel("disableflying.yml").getString(now))) {
+                        new EggPixel("disableflying.yml").set(now, false);
                         sender.sendMessage(Objects.requireNonNull(new EggPixel("config.yml").getString("FLYING_ADD_OR_REMOVE_WORLD")).replace("%WORLD%", now).replace("%STATUS%", "False"));
                     } else {
-                        new EggPixel("config.yml").set(now, true);
+                        new EggPixel("disableflying.yml").set(now, true);
                         sender.sendMessage(Objects.requireNonNull(new EggPixel("config.yml").getString("FLYING_ADD_OR_REMOVE_WORLD")).replace("%WORLD%", now).replace("%STATUS%", "True"));
                     }
-                    new EggPixel("config.yml").save();
+                    new EggPixel("disableflying.yml").save();
                     return true;
                 }
                 if (Objects.equals(args[0], "reload") && args.length == 1) {
-                    new EggPixel("config.yml").reload();
+                    new EggPixel("disableflying.yml").reload();
                     sender.sendMessage("§a[DisableFlying] Plugin reloaded.");
                     return true;
                 }
                 if (args.length == 1) {
                     String now = Objects.requireNonNull(Bukkit.getWorld(args[0])).getName();
-                    if (Boolean.parseBoolean(new EggPixel("config.yml").getString(now))) {
-                        new EggPixel("config.yml").set(now, false);
+                    if (Boolean.parseBoolean(new EggPixel("disableflying.yml").getString(now))) {
+                        new EggPixel("disableflying.yml").set(now, false);
                         sender.sendMessage(Objects.requireNonNull(new EggPixel("config.yml").getString("FLYING_ADD_OR_REMOVE_WORLD")).replace("%WORLD%", now).replace("%STATUS%", "False"));
                     } else {
-                        new EggPixel("config.yml").set(now, true);
+                        new EggPixel("disableflying.yml").set(now, true);
                         sender.sendMessage(Objects.requireNonNull(new EggPixel("config.yml").getString("FLYING_ADD_OR_REMOVE_WORLD")).replace("%WORLD%", now).replace("%STATUS%", "True"));
                     }
-                    new EggPixel("config.yml").save();
+                    new EggPixel("disableflying.yml").save();
                     return true;
                 }
                 if (args.length == 2) {
                     String now = Objects.requireNonNull(Bukkit.getWorld(args[0])).getName();
                     boolean bool = Boolean.parseBoolean(args[1]);
                     if (!bool) {
-                        new EggPixel("config.yml").set(now, false);
+                        new EggPixel("disableflying.yml").set(now, false);
                         sender.sendMessage(new EggPixel("config.yml").getString("FLYING_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "False"));
                     } else {
-                        new EggPixel("config.yml").set(now, true);
+                        new EggPixel("disableflying.yml").set(now, true);
                         sender.sendMessage(new EggPixel("config.yml").getString("FLYING_ADD_OR_REMOVE_WORLD").replace("%WORLD%", now).replace("%STATUS%", "True"));
                     }
-                    new EggPixel("config.yml").save();
+                    new EggPixel("disableflying.yml").save();
                     return true;
                 }
             } else {

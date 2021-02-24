@@ -12,7 +12,11 @@ public class EggPixel{
     final String FileName;
     YamlConfiguration get = null;
     public EggPixel(String FileName) {
-        this.FileName = FileName;
+        if (!FileName.endsWith(".yml")) {
+            this.FileName = FileName + ".yml";
+        } else {
+            this.FileName = FileName;
+        }
     }
     public String getString(String Key) {
         try {
@@ -35,8 +39,20 @@ public class EggPixel{
             load().save(new File(Main.plugin.getDataFolder(), FileName));
         } catch (Exception e) {
             new FATAL(e);
-            if (Main.plugin.getDataFolder().delete()) {
+            if (new File(Main.plugin.getDataFolder(),"antibuild.yml").delete() || new File(Main.plugin.getDataFolder(),"config.yml").delete()) {
                 new Message("已删除所有配置文件!").debug();
+            }
+        }
+    }
+    public void saveDefault() {
+        try {
+            if (!new File(Main.plugin.getDataFolder(), FileName).exists()) {
+                Main.plugin.saveResource(FileName, true);
+            }
+        } catch (Exception e) {
+            new FATAL(e);
+            if (new File(Main.plugin.getDataFolder(),"antibuild.yml").delete() || new File(Main.plugin.getDataFolder(),"config.yml").delete()) {
+                new Message("这可能是一个bug，也可能是没有对EmeraldTools文件夹的访问权限!").debug();
             }
         }
     }

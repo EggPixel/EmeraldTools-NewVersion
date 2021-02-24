@@ -25,7 +25,3 @@ FLYING_USAGE: "§a[Flying] §c用法: /fly [玩家名]"
 PREFIX_ADD: "§a[Prefix] 成功给%PLAYERNAME%添加称号%PREFIX%"
 PREFIX_USAGE: "§a[Prefix] §c用法: /prefix <玩家名> <add/remove> [头衔](颜色符号为&)"
 PREFIX_REMOVE: "§a[Prefix] 成功删除%PLAYERNAME%的称号"
-#禁止飞行的世界:
-#格式: 世界名: true/false
-#游戏内使用/df可自动修改
-

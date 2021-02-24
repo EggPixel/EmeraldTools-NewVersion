@@ -13,24 +13,13 @@ import cn.eggpixel.Prefix.PrefixCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.File;
 import java.util.Objects;
-import java.util.logging.Level;
 
 public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
-        File config = new File(getDataFolder(), "config.yml");
-        new EggPixel("antibuild.yml").load();
-        if (!config.exists()) {
-            saveResource("config.yml",false);
-            getLogger().log(Level.SEVERE,"没有找到配置文件!正在生成配置文件!");
-        }
-        File antibuild = new File(getDataFolder(), "antibuild.yml");
-        if (!antibuild.exists()) {
-            saveResource("antibuild.yml",false);
-            getLogger().log(Level.SEVERE,"没有找到antibuild.yml文件!正在生成!");
-        }
+        new EggPixel("config.yml").save();
+        new EggPixel("antibuild.yml").save();
         new EggPixel("prefix.yml").save();
         Bukkit.getConsoleSender().sendMessage("§a[EmeraldTools] ***********************");
         Bukkit.getConsoleSender().sendMessage("§a[EmeraldTools] *     插件已启动!     *");
@@ -46,6 +35,7 @@ public class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new AntiDropEvent(),this);
         Bukkit.getPluginManager().registerEvents(new AntiBuildEvents(), this);
         Bukkit.getPluginManager().registerEvents(new ChatEvent(), this);
+        new Update("https://www.eggpixel.cn/update/up.txt", "2.0.0");
     }
     public static Main plugin;
 

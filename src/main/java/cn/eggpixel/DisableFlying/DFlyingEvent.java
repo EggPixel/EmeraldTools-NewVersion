@@ -19,7 +19,7 @@ public class DFlyingEvent implements Listener {
     @EventHandler
     public void onPlayerFly(PlayerMoveEvent e) {
         if (e.getPlayer().isFlying() && !e.getPlayer().hasPermission("disableflying.admin")) {
-            if (Boolean.parseBoolean(new EggPixel("config.yml").getString(e.getPlayer().getWorld().getName()))) {
+            if (Boolean.parseBoolean(new EggPixel("disableflying.yml").getString(e.getPlayer().getWorld().getName()))) {
                 e.getPlayer().setAllowFlight(false);
                 e.getPlayer().setFlying(false);
                 e.getPlayer().sendMessage(Objects.requireNonNull(new EggPixel("config.yml").getString("FLYING_IS_NOT_ENABLED")));

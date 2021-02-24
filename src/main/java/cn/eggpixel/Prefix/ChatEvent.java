@@ -18,6 +18,5 @@ public class ChatEvent implements Listener {
         }
         e.setCancelled(true);
         Bukkit.broadcastMessage(this.mess);
-
     }
 }
