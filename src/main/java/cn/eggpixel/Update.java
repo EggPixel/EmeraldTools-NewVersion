@@ -10,7 +10,7 @@ public class Update{
     /**
      * https://www.eggpixel.cn/update/up.txt
      * */
-    public Update(String URL,String Version) {
+    protected Update(String URL,String Version) {
         try {
             URL url = new URL(URL);
             InputStream in =url.openStream();
