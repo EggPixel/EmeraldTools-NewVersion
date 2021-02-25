@@ -25,3 +25,7 @@ FLYING_USAGE: "§a[Flying] §c用法: /fly [玩家名]"
 PREFIX_ADD: "§a[Prefix] 成功给%PLAYERNAME%添加称号%PREFIX%"
 PREFIX_USAGE: "§a[Prefix] §c用法: /prefix <玩家名> <add/remove> [头衔](颜色符号为&)"
 PREFIX_REMOVE: "§a[Prefix] 成功删除%PLAYERNAME%的称号"
+
+REPAIR_MODE: "§a[RepairServer] 已%STATUS%维修模式"
+REPAIR_USAGE: "§a[RepairServer] §c用法:/repair [on/off]"
+REPAIR_KICK: "§a[RepairServer] 服务器正在维护，请稍后再次进入!"

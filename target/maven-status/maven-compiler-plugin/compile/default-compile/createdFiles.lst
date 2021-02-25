@@ -14,3 +14,4 @@ cn\eggpixel\EggPixel.class
 cn\eggpixel\AntiBuild\AntiBuildEvents.class
 cn\eggpixel\Heal\HealCommand.class
 cn\eggpixel\Fly\FlyCommand.class
+cn\eggpixel\RepairServer\RepairCommand.class

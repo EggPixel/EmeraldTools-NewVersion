@@ -35,6 +35,11 @@ commands:
     description: Give a player a prefix
     permission: emeraldtools.true
     permission-message: '§cYou do not have permission to do this!'
+  repair:
+    usage: /<command> [on/off]
+    description: If player does not have permission,they will kicked
+    permission: emeraldtools.true
+    permission-message: '§cYou do not have permission to do this!'
 permissions:
   emeraldtools.main:
     default: op
@@ -47,6 +52,7 @@ permissions:
       emeraldtools.lagremover: true
       emeraldtools.ban: true
       emeraldtools.addprefix: true
+      emeraldtools.repair: true
   antibuild.admin:
     default: op
     children:
@@ -75,3 +81,10 @@ permissions:
     default: op
   emeraldtools.addprefix:
     default: op
+  emeraldtools.repair:
+    default: op
+    children:
+      emeraldtools.repair.join: true
+  emeraldtools.repair.join:
+    default: op
+    description: Player can join the server when repair mode on
