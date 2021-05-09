@@ -1,4 +1,4 @@
-package cn.eggpixel.AntiDrop;
+package cn.eggpixel.antiDrop;
 
 import cn.eggpixel.EggPixel;
 import cn.eggpixel.Main;
@@ -9,14 +9,13 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-import static cn.eggpixel.AntiDrop.AntiDropEvent.AntiDrop;
+import static cn.eggpixel.antiDrop.AntiDropEvent.AntiDrop;
 
 public class AntiDropCommand implements CommandExecutor {
     public final Main plugin;
     public AntiDropCommand(Main plugin) {
         this.plugin = plugin;
     }
-
     @Override
     public boolean onCommand(CommandSender sender, @NotNull Command cmd, @NotNull String s, String[] args) {
         if (sender.hasPermission("emeraldtools.antidrop")) {

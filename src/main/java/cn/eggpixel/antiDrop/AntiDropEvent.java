@@ -1,4 +1,4 @@
-package cn.eggpixel.AntiDrop;
+package cn.eggpixel.antiDrop;
 
 import cn.eggpixel.EggPixel;
 import org.bukkit.event.EventHandler;

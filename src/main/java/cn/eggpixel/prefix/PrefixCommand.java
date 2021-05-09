@@ -1,4 +1,4 @@
-package cn.eggpixel.Prefix;
+package cn.eggpixel.prefix;
 
 import cn.eggpixel.EggPixel;
 import cn.eggpixel.Main;
@@ -14,7 +14,6 @@ public class PrefixCommand implements CommandExecutor {
     public PrefixCommand(Main plugin) {
         this.plugin = plugin;
     }
-
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String s, @NotNull String[] args) {
         if (!sender.hasPermission("emeraldtools.addprefix")) {

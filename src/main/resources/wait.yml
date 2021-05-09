@@ -1,0 +1,5 @@
+#待审核的小组
+#g1: true等待审核
+#g1: false已拒绝
+#g1: ok已通过
+#all: xxx|xxx

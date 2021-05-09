@@ -1,4 +1,4 @@
-package cn.eggpixel.RepairServer;
+package cn.eggpixel.repairServer;
 
 import cn.eggpixel.EggPixel;
 import cn.eggpixel.Main;

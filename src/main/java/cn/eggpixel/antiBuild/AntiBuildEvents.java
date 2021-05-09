@@ -1,4 +1,4 @@
-package cn.eggpixel.AntiBuild;
+package cn.eggpixel.antiBuild;
 
 import cn.eggpixel.EggPixel;
 import cn.eggpixel.Main;

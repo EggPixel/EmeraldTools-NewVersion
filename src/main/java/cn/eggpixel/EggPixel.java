@@ -1,6 +1,6 @@
 package cn.eggpixel;
 
-import cn.eggpixel.Exception.FATAL;
+import cn.eggpixel.exception.FATAL;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
@@ -9,16 +9,16 @@ public class EggPixel{
     /**
      * 获取yml文件中的内容
      * */
-    final String FileName;
+    final java.lang.String FileName;
     YamlConfiguration get = null;
-    public EggPixel(String FileName) {
+    public EggPixel(java.lang.String FileName) {
         if (!FileName.endsWith(".yml")) {
             this.FileName = FileName + ".yml";
         } else {
             this.FileName = FileName;
         }
     }
-    public String getString(String Key) {
+    public java.lang.String getString(String Key) {
         try {
             YamlConfiguration getting = load();
             return getting.getString(Key);

@@ -1,4 +1,4 @@
-package cn.eggpixel.Heal;
+package cn.eggpixel.heal;
 
 import cn.eggpixel.EggPixel;
 import cn.eggpixel.Main;
@@ -17,7 +17,6 @@ public class HealCommand implements CommandExecutor {
     public HealCommand(Main plugin) {
         this.plugin = plugin;
     }
-
     @Override
     public boolean onCommand(CommandSender sender, @NotNull Command cmd, @NotNull String s, String[] args) {
         if (sender.hasPermission("emeraldtools.heal")) {

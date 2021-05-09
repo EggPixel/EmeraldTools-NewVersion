@@ -1,6 +1,14 @@
 #首设置:
 #true为玩家因本插件飞行坠落时不受伤
 FLY_NO_FALL_DAMAGE: true
+#部分信息存储在MySQL吗
+DATA_IN_MYSQL: false
+#MYSQL:
+  #USER: "root"
+  #PASSWORD: "123456"
+  #DATABASE: "emeraldtools"
+  #IP: "jdbc:mysql://127.0.0.1:3306/"
+  #IP后必须要加/
 #信息模块:
 DO_IN_CONSOLE: "§a[EmeraldTools] §c§l此命令无法在控制台使用!"
 WORLD_NOT_FOUND: "§a[EmeraldTools] §c世界没有找到!"
@@ -29,3 +37,36 @@ PREFIX_REMOVE: "§a[Prefix] 成功删除%PLAYERNAME%的称号"
 REPAIR_MODE: "§a[RepairServer] 已%STATUS%维修模式"
 REPAIR_USAGE: "§a[RepairServer] §c用法:/repair [on/off]"
 REPAIR_KICK: "§a[RepairServer] 服务器正在维护，请稍后再次进入!"
+
+GROUP_CREATE: "§a[Group] 成功创建公会!名称: %GROUPNAME%"
+GROUP_WAIT: "§a[Group] 正在等待管理员审核..."
+GROUP_JOIN: "§a[Group] 成功加入公会!名称: %GROUPNAME%"
+GROUP_DESTROY: "§a[Group] §c成功解散公会!操作者: %PLAYERNAME%"
+GROUP_LEAVE: "§a[Group] 你已离开公会!"
+GROUP_USAGE: "§a[Group] §c命令参数错误!"
+GROUP_NOT_FOUND: "§a[Group] §c公会不存在!"
+GROUP_DENY: "§a[Group] §c已拒绝!"
+GROUP_ALLOW: "§a[Group] 已通过!"
+GROUP_BY_DENY: "§a[Group] §c你的小组申请已被拒绝!"
+GROUP_BY_ALLOW: "§a[Group] 你的小组申请已被通过!"
+GROUP_EDIT: "§a[Group] 成功编辑%EDIT%为%TO%"
+GROUP_EXIST: "§a[Group] §c小组已存在!"
+GROUP_ALREADY_JOIN: "§a[Group] §c你已加入其他小组!"
+GROUP_NOT_JOIN: "§a[Group] §c你未加入任何小组!"
+GROUP_CHAT_FORMAT: "§b§l[§a§l%GroupName%§b§l] §a%PlayerName%>> §r%Message%"
+GROUP_RELOADED: "§a[Group] 已重载!"
+GROUP_CANNOT_LEAVE: "§a[Group] §c组长不能离开!"
+
+BAN_USAGE: "§a[Ban] §c/ban <PlayerName> <BanSeconds> <Reason>"
+BAN_PLAYER: "§a[Ban] 成功封禁%PLAYERNAME%,理由:%REASON%,%BANENDS%解禁"
+BAN_BROADCAST: "§a[管理系统] §b§l一个玩家因%REASON%被%ADMIN%封禁"
+BAN_DEFAULT_REASON: "§c违反规则"
+BAN_FORMAT: |
+  &b&l[Server Manager]
+
+  &d&l你的账号已经被封禁了!&f
+
+  &a&l封禁日期: &e&l%DATETIME%
+  &a&l解禁时间: &c&l%BANENDS%
+  &a&l封禁原因: &e&l%REASON%&f
+  &a&lBanID: &e&l%BANID%

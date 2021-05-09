@@ -1,4 +1,4 @@
-package cn.eggpixel.Fly;
+package cn.eggpixel.fly;
 
 import cn.eggpixel.EggPixel;
 import cn.eggpixel.Main;
@@ -14,7 +14,6 @@ public class FlyCommand implements CommandExecutor {
     public FlyCommand(Main plugin) {
         this.plugin = plugin;
     }
-
     @Override
     public boolean onCommand(CommandSender sender, @NotNull Command command, @NotNull String s, String[] args) {
         if (sender.hasPermission("emeraldtools.fly")) {

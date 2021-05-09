@@ -1,6 +1,6 @@
 main: cn.eggpixel.Main
 name: EmeraldTools
-version: 2.0.0
+version: 2.1.0
 author: EmeraldsEgg
 api-version: 1.15
 
@@ -40,6 +40,20 @@ commands:
     description: If player does not have permission,they will kicked
     permission: emeraldtools.true
     permission-message: '§cYou do not have permission to do this!'
+  group:
+    usage: /<command> [create/join/chat...]
+    description: Player can talk in a group
+    permission: emeraldtools.true
+    permission-message: '§cYou do not have permission to do this!'
+  ban:
+    usage: /<command> <player> [time] [reason]
+    description: banned hackers
+    permission: emeraldtools.true
+    permission-message: '§cYou do not have permission to do this!'
+    aliases: [unban,eban]
+  reload:
+      usage: /<command> [confirm/commands/permissions]
+
 permissions:
   emeraldtools.main:
     default: op
@@ -53,6 +67,7 @@ permissions:
       emeraldtools.ban: true
       emeraldtools.addprefix: true
       emeraldtools.repair: true
+      emeraldtools.group: true
   antibuild.admin:
     default: op
     children:
@@ -88,3 +103,19 @@ permissions:
   emeraldtools.repair.join:
     default: op
     description: Player can join the server when repair mode on
+  emeraldtools.group:
+    default: op
+    children:
+      emeraldtools.group.create: true
+      emeraldtools.group.join: true
+      emeraldtools.group.create_op: true
+  emeraldtools.group.create:
+    default: true
+  emeraldtools.group.join:
+    default: true
+  emeraldtools.group.create_op:
+    default: op
+  emeraldtools.edit:
+    default: true
+  emeraldtools.ban:
+    default: op

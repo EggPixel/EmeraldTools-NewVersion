@@ -1,4 +1,4 @@
-package cn.eggpixel.Exception;
+package cn.eggpixel.exception;
 
 import cn.eggpixel.Main;
 import cn.eggpixel.Message;
@@ -14,7 +14,7 @@ public class FATAL {
     public FATAL(Exception ExceptionInfo) {
         new Message("=================THIS IS A BUG OR FILE NOT EXIST!=============").error();
         new Message("错误信息:" + ExceptionInfo.getMessage()).error();
-        new Message(ExceptionInfo.toString()).error();
+        ExceptionInfo.printStackTrace();
         new Message("反馈:https://www.eggpixel.cn/FeedBack.html").error();
         new Message("插件即将关闭!").error();
         new Message("==============================================================").error();
